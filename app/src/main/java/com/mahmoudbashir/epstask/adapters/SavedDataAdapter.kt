@@ -37,7 +37,7 @@ class SavedDataAdapter:RecyclerView.Adapter<SavedDataAdapter.ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentData = differ.currentList[position]
         holder.itemView.apply {
-            Picasso.get().load(currentData.imgUri).into(itemSavedBinding.imgPic)
+            Picasso.get().load(currentData.imgUri).placeholder(R.drawable.ic_baseline_camera_alt_24).into(itemSavedBinding.imgPic)
             itemSavedBinding.txtTitle.text = currentData.title
             itemSavedBinding.txtDesc.text = currentData.description
 
